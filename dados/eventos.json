@@ -1,0 +1,99 @@
+{
+    "version": 1,
+    "contacts": {
+        "whatsapp": "",
+        "phone": ""
+    },
+    "homeGalleryIds": [],
+    "events": [
+        {
+            "id": "exemplo-evento-futuro",
+            "title": "Nome do próximo evento",
+            "date": "2027-03-20",
+            "time": "14:00",
+            "location": "Local a confirmar",
+            "description": "Texto de exemplo. Substitui esta informação pelos dados reais do evento.",
+            "flyer": "",
+            "activities": [
+                "Actividade de exemplo"
+            ],
+            "photos": [],
+            "videos": []
+        },
+        {
+            "id": "exemplo-evento-passado",
+            "title": "Evento realizado de exemplo",
+            "date": "2026-06-15",
+            "time": "",
+            "location": "Local do evento",
+            "description": "Registo de exemplo para mostrar como os eventos passados aparecem na galeria.",
+            "flyer": "",
+            "activities": [],
+            "photos": [],
+            "videos": []
+        }
+    ],
+    "organizations": [
+        {
+            "id": "organizacao-1",
+            "name": "Nome da organização 1",
+            "role": "Organização integrante",
+            "description": "Adiciona aqui a descrição oficial da organização.",
+            "logo": "",
+            "representative": "Nome do representante",
+            "position": "Presidente",
+            "representativePhoto": "",
+            "socials": [
+                {
+                    "name": "Instagram",
+                    "url": "https://instagram.com/"
+                },
+                {
+                    "name": "Facebook",
+                    "url": "https://facebook.com/"
+                }
+            ]
+        },
+        {
+            "id": "organizacao-2",
+            "name": "Nome da organização 2",
+            "role": "Organização integrante",
+            "description": "Adiciona aqui a descrição oficial da organização.",
+            "logo": "",
+            "representative": "Nome do representante",
+            "position": "Presidente",
+            "representativePhoto": "",
+            "socials": []
+        },
+        {
+            "id": "organizacao-3",
+            "name": "Nome da organização 3",
+            "role": "Organização integrante",
+            "description": "Adiciona aqui a descrição oficial da organização.",
+            "logo": "",
+            "representative": "Nome do representante",
+            "position": "Presidente",
+            "representativePhoto": "",
+            "socials": []
+        },
+        {
+            "id": "organizacao-4",
+            "name": "Nome da organização 4",
+            "role": "Organização integrante",
+            "description": "Adiciona aqui a descrição oficial da organização.",
+            "logo": "",
+            "representative": "Nome do representante",
+            "position": "Presidente",
+            "representativePhoto": "",
+            "socials": []
+        }
+    ],
+    "partners": [
+        {
+            "id": "parceiro-1",
+            "name": "Nome do parceiro",
+            "description": "Descrição breve do parceiro.",
+            "logo": ""
+        }
+    ]
+}

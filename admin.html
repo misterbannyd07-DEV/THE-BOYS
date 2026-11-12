@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ferramenta local para preparar e exportar os dados de eventos do Grupo The Boys.">
+    <title>Gestão de eventos | The Boys</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/admin.js" defer></script>
+</head>
+<body class="admin-body">
+    <div class="page-loader" aria-hidden="true"><span class="loader-mark">TB</span><span class="loader-line"></span></div>
+    <header class="site-header admin-header">
+        <a class="brand" href="admin.html"><span class="brand-mark">TB</span><span>GESTÃO DE EVENTOS</span></a>
+        <div class="admin-header-actions"><button class="theme-toggle" type="button" aria-label="Activar modo nocturno" title="Alternar tema">☾ <span>Modo nocturno</span></button><a class="text-link" href="index.html">Ver site público <span aria-hidden="true">↗</span></a></div>
+    </header>
+
+    <main class="admin-main section-wrap">
+        <section class="page-hero admin-hero">
+            <p class="eyebrow">Ferramenta local</p>
+            <h1>Organiza os teus<br><span>eventos.</span></h1>
+            <p class="lead">Importa um JSON existente, cria ou edita eventos e exporta os dados prontos para o próximo deploy.</p>
+        </section>
+
+        <section class="admin-toolbar panel">
+            <div><h2>Dados do projecto</h2><p class="muted">As alterações ficam guardadas temporariamente neste navegador até exportares o ficheiro.</p></div>
+            <div class="toolbar-actions">
+                <label class="button button-outline file-button">Importar JSON<input id="import-json" type="file" accept=".json,application/json"></label>
+                <button id="export-json" class="button button-primary" type="button">Exportar JSON <span aria-hidden="true">↓</span></button>
+            </div>
+            <p id="admin-status" class="status-message" role="status">A carregar dados iniciais…</p>
+        </section>
+
+        <section class="admin-layout">
+            <form id="event-form" class="panel admin-form">
+                <div class="section-heading"><div><p class="eyebrow">Editor</p><h2 id="form-title">Criar evento</h2></div></div>
+                <input id="event-id" type="hidden">
+                <label for="event-title">Nome do evento *</label>
+                <input id="event-title" name="title" type="text" required maxlength="120" placeholder="Ex.: Festival The Boys">
+                <div class="form-row">
+                    <div><label for="event-date">Data *</label><input id="event-date" name="date" type="date" required></div>
+                    <div><label for="event-time">Hora</label><input id="event-time" name="time" type="time"></div>
+                </div>
+                <label for="event-location">Local</label>
+                <input id="event-location" name="location" type="text" maxlength="180" placeholder="Local do evento">
+                <label for="event-description">Descrição</label>
+                <textarea id="event-description" name="description" rows="4" maxlength="2000" placeholder="Informações sobre o evento"></textarea>
+                <label for="event-flyer">Caminho ou URL do flyer</label>
+                <input id="event-flyer" name="flyer" type="text" placeholder="imagens/flyers/nome-do-flyer.jpg">
+                <label for="event-activities">Actividades (uma por linha)</label>
+                <textarea id="event-activities" name="activities" rows="3" placeholder="Concurso de cosplay&#10;Exposição"></textarea>
+                <label for="event-photos">Fotografias (um caminho ou URL por linha)</label>
+                <textarea id="event-photos" name="photos" rows="3" placeholder="imagens/galeria/evento/foto-01.jpg"></textarea>
+                <div class="video-input-section">
+                    <label for="event-youtube">Vídeos do YouTube (um link ou ID por linha)</label>
+                    <textarea id="event-youtube" name="youtube" rows="3" placeholder="Ex.: https://youtu.be/AbCd1234 ou apenas AbCd1234"></textarea>
+                    <p class="field-help">Podes colar o link completo. Se preferires, usa apenas o ID do vídeo: é o código depois de <code>v=</code> ou no fim do link curto <code>youtu.be/</code>.</p>
+                </div>
+                <div class="video-input-section">
+                    <label for="event-tiktok">Vídeos do TikTok (um link por linha)</label>
+                    <textarea id="event-tiktok" name="tiktok" rows="3" placeholder="Ex.: https://www.tiktok.com/@utilizador/video/1234567890123456789"></textarea>
+                    <p class="field-help">Cola o link partilhado do TikTok. O sistema identifica automaticamente o número do vídeo para preparar a incorporação.</p>
+                </div>
+                <div class="form-actions">
+                    <button class="button button-primary" type="submit">Guardar evento</button>
+                    <button id="reset-form" class="button button-outline" type="button">Limpar formulário</button>
+                </div>
+            </form>
+
+            <section class="panel admin-event-list">
+                <div class="section-heading"><div><p class="eyebrow">Arquivo</p><h2>Eventos registados</h2></div><span id="event-count" class="count-pill">0</span></div>
+                <div id="admin-events"><p class="empty-state">A carregar eventos…</p></div>
+            </section>
+        </section>
+        <p class="admin-notice">Importante: esta página é uma ferramenta local, não um sistema de autenticação. Não a publiques como painel seguro. Para actualizar o site público, exporta o JSON e substitui <code>dados/eventos.json</code> antes de fazer o deploy.</p>
+    </main>
+    <footer class="site-footer">
+        <a class="brand" href="index.html"><span class="brand-mark">TB</span><span>THE BOYS</span></a>
+        <p>Ferramenta local de preparação de dados.</p>
+        <a class="text-link" href="index.html">Site público <span aria-hidden="true">↗</span></a>
+    </footer>
+</body>
+</html>

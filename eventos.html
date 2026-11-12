@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calendário de eventos do Grupo The Boys.">
+    <title>Eventos | The Boys</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/site.js" defer></script>
+</head>
+<body>
+    <div class="page-loader" aria-hidden="true"><span class="loader-mark">TB</span><span class="loader-line"></span></div>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="The Boys — página inicial"><span class="brand-mark">TB</span><span>THE BOYS</span></a>
+        <nav class="main-nav" aria-label="Navegação principal">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link active" href="eventos.html">Eventos</a>
+            <a class="nav-link" href="galeria.html">Galeria</a>
+            <a class="nav-link" href="sobre.html">Sobre</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Activar modo nocturno" title="Alternar tema">☾ <span>Modo nocturno</span></button>
+    </header>
+
+    <main>
+        <section class="page-hero section-wrap">
+            <p class="eyebrow">Marca na agenda</p>
+            <h1>Eventos que nos<br><span>fazem reunir.</span></h1>
+            <p class="lead">Consulta os próximos encontros e revisita os eventos que já aconteceram.</p>
+        </section>
+        <section class="section-wrap section-block">
+            <div class="section-heading"><div><p class="eyebrow">Em destaque</p><h2>Os próximos eventos</h2></div></div>
+            <div id="featured-events" class="featured-grid"><p class="empty-state">A carregar eventos…</p></div>
+        </section>
+        <section class="section-wrap section-block">
+            <div class="section-heading"><div><p class="eyebrow">Calendário completo</p><h2>Todos os eventos</h2></div>
+                <div class="filter-buttons year-buttons" role="group" aria-label="Escolher ano">
+                    <button class="filter-button active" data-event-year="2023" type="button">2023</button>
+                    <button class="filter-button" data-event-year="2024" type="button">2024</button>
+                    <button class="filter-button" data-event-year="2025" type="button">2025</button>
+                    <button class="filter-button" data-event-year="2026" type="button">2026</button>
+                    <button class="filter-button" data-event-year="2027" type="button">2027</button>
+                </div>
+            </div>
+            <div id="all-events" class="events-grid"><p class="empty-state">A carregar calendário…</p></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="brand" href="index.html"><span class="brand-mark">TB</span><span>THE BOYS</span></a>
+        <p>© <span class="current-year"></span> Grupo The Boys. Todos os direitos reservados.</p>
+        <a class="text-link" href="sobre.html">Sobre o grupo <span aria-hidden="true">→</span></a>
+    </footer>
+    <nav class="mobile-dock" aria-label="Navegação móvel">
+        <a class="dock-link" href="index.html"><span class="dock-icon">⌂</span><span>Home</span></a>
+        <a class="dock-link active" href="eventos.html"><span class="dock-icon">▦</span><span>Eventos</span></a>
+        <a class="dock-link" href="galeria.html"><span class="dock-icon">▧</span><span>Galeria</span></a>
+        <a class="dock-link" href="sobre.html"><span class="dock-icon">◎</span><span>Sobre</span></a>
+    </nav>
+</body>
+</html>
